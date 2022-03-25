@@ -1,0 +1,11 @@
+{
+	"pages": [
+		"pages/Index/index"
+	],
+	"window": {
+		"navigationBarTitleText": "miniprogram-project"
+	},
+	"subpackages": [],
+	"preloadRule": {},
+	"sitemapLocation": "sitemap.json"
+}

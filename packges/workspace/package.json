@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "miniprogram-element": "latest",
+    "miniprogram-render": "latest"
+  }
+}
