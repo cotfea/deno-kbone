@@ -8,9 +8,12 @@ import Index from '../../common/Index/index.js'
 
 // const {
 //   self 
+
 // , HTMLElement
 // , Element
+// , SVGElement
 // , Node
+
 // , localStorage
 // , sessionStorage 
 // , navigator
@@ -24,8 +27,10 @@ import Index from '../../common/Index/index.js'
 // , cancelAnimationFrame
 // , getComputedStyle
 // , XMLHttpRequest
+
 // , Worker
 // , SharedWorker
+
 // } = window
 
 const init = (window, document) => {

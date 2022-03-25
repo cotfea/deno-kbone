@@ -23,6 +23,7 @@ cp -R ./node_modules/miniprogram-render/dist/* ./dist/miniprogram_npm/miniprogra
 deno bundle ./src/common/Index/index.js ./src/common/Index/index.bundle.js
 mkdir -p ./dist/common/Index
 echo 'export default (window, document) => {' >> ./dist/common/Index/index.js
+echo 'const { Element, SVGElement, Node } = window' >> ./dist/common/Index/index.js
 sed -e '$i\return createApp' -e '$d' ./src/common/Index/index.bundle.js >> ./dist/common/Index/index.js
 echo '}' >> ./dist/common/Index/index.js
 rm ./src/common/Index/index.bundle.js
