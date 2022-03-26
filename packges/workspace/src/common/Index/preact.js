@@ -1,17 +1,16 @@
-import { render, h } from 'https://esm.sh/preact'
-import htm from 'https://esm.sh/htm'
+import lib from '../../lib/preact.js'
 
-const html = htm.bind(h)
+export default (window, document) => {
 
-const createApp = () => {
-  const container = document.createElement('div')
-  container.id = 'app'
-  document.body.appendChild(container)
+const {
+  render, html
+} = lib(window, document)
 
-  render(
-    html`<h1>Hello World!!!<h1/>`
-  , container
-  )
+const App = () => html`<h1>Hello World!!!</h1>`
+
+return {
+  App: App()
+, render
 }
 
-export default createApp
+}

@@ -2,6 +2,7 @@ const mp = require('miniprogram-render')
 
 import getBaseConfig from '../base.js'
 import config from '../../config'
+
 import Index from '../../common/Index/index.js'
 
 // const App = (options) => {window.appOptions = options}
@@ -35,7 +36,18 @@ import Index from '../../common/Index/index.js'
 
 const init = (window, document) => {
 
-  const createApp = Index(window, document)
+  const {
+    App 
+  , render
+  } = Index(window, document)
+
+  const createApp = () => {
+    const container = document.createElement('div')
+    container.id = 'app'
+    document.body.appendChild(container)
+
+    render(App, container)
+  }
 
   window.createApp =
     'undefined' != typeof wx
